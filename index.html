@@ -208,7 +208,7 @@
             <a href="https://markxplorer.my.id" target="_blank">Portofolio Saya</a>
         </div>
         <div class="footer-copyright">
-            <p>&copy; 2025 Nama Anda. All Rights Reserved.</p>
+            <p>&copy; 2025 Mark Xplorer. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -238,80 +238,4 @@
         });
     </script>
 </body>
-</html>    </div>
-
-    <main>
-        <div class="container">
-            <h1>iPhone QC Generator</h1>
-            <form id="generatorForm">
-                <div class="form-grid">
-                    <div class="form-group full-width"><label for="textInput">Teks Pesan</label><input type="text" id="textInput" required></div>
-                    <div class="form-group"><label for="chatTimeInput">Waktu di Pesan</label><input type="time" id="chatTimeInput" value="11:02" required></div>
-                    <div class="form-group"><label for="statusBarTimeInput">Waktu di Status Bar</label><input type="time" id="statusBarTimeInput" value="17:01" required></div>
-                    <div class="form-group"><label for="signalNameInput">Nama Sinyal</label><input type="text" id="signalNameInput" value="Telkomsel" required></div>
-                    <div class="form-group"><label for="fontNameInput">Jenis Font</label><select id="fontNameInput"><option>Arial</option><option>Roboto</option><option>Times New Roman</option></select></div>
-                    <div class="form-group"><label for="bubbleColorInput">Warna Bubble</label><input type="color" id="bubbleColorInput" value="#272a2f"></div>
-                    <div class="form-group"><label for="menuColorInput">Warna Menu Atas</label><input type="color" id="menuColorInput" value="#272a2f"></div>
-                    <div class="form-group"><label for="textColorInput">Warna Teks</label><input type="color" id="textColorInput" value="#FFFFFF"></div>
-                    <button type="submit" class="btn" id="generateBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg><span id="generateBtnText">Generate Gambar</span></button>
-                </div>
-            </form>
-            <div class="result-container">
-                <div class="loader-container" id="loader"><div class="loader"></div></div>
-                <img id="resultImage" alt="Gambar Hasil Generate">
-                <a id="downloadButton" href="#" download="qc-iphone-image.png" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg><span>Download Gambar</span></a>
-            </div>
-        </div>
-    </main>
-    
-    <footer class="footer-minimalist">
-        <div class="footer-social-icons">
-            <a href="https://instagram.com/username" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com/@username" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://github.com/username" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://whatsapp.com/channel/NOMOR_" target="_blank" title="Saluran WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <div class="footer-links">
-            <a href="[URL_SOURCE_CODE]" target="_blank">Source Code</a>
-            <span>&nbsp;|&nbsp;</span>
-            <a href="[URL_PORTOFOLIO]" target="_blank">Portofolio Saya</a>
-        </div>
-        <div class="footer-copyright">
-            <p>&copy; 2025 Nama Anda. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // --- SCRIPT BARU UNTUK MODAL ---
-        const modalOverlay = document.getElementById('iklanModal');
-        const tombolFollow = document.getElementById('tombolFollow');
-
-        // Tampilkan modal saat halaman selesai dimuat
-        window.addEventListener('load', () => {
-            modalOverlay.style.display = 'flex';
-        });
-
-        /* Sembunyikan modal HANYA saat tombol follow diklik
-        tombolFollow.addEventListener('click', () => {
-            modalOverlay.style.display = 'none';
-        });
-*/
-
-        // --- Script untuk Generator (tidak berubah) ---
-        document.getElementById('generatorForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const generateBtn = document.getElementById('generateBtn'), generateBtnText = document.getElementById('generateBtnText'), loader = document.getElementById('loader'), resultImage = document.getElementById('resultImage'), downloadButton = document.getElementById('downloadButton');
-            generateBtn.disabled = true; generateBtnText.textContent = 'Generating...'; loader.style.display = 'block'; resultImage.style.display = 'none'; downloadButton.style.display = 'none';
-            const text = document.getElementById('textInput').value, chatTime = document.getElementById('chatTimeInput').value, statusBarTime = document.getElementById('statusBarTimeInput').value, signalName = document.getElementById('signalNameInput').value, bubbleColor = document.getElementById('bubbleColorInput').value, menuColor = document.getElementById('menuColorInput').value, textColor = document.getElementById('textColorInput').value, fontName = document.getElementById('fontNameInput').value, apikey = 'freeApikey';
-            const baseUrl = 'https://anabot.my.id/api/maker/iqc', params = new URLSearchParams({ text, chatTime, statusBarTime, signalName, bubbleColor, menuColor, textColor, fontName, apikey }), finalUrl = `${baseUrl}?${params.toString()}`;
-            resultImage.src = finalUrl;
-            resultImage.onload = function() {
-                loader.style.display = 'none'; resultImage.style.display = 'block'; downloadButton.href = finalUrl; downloadButton.style.display = 'flex'; generateBtn.disabled = false; generateBtnText.textContent = 'Generate Gambar';
-            };
-            resultImage.onerror = function() {
-                loader.style.display = 'none'; alert('Gagal memuat gambar. Periksa kembali koneksi atau parameter API Anda.'); generateBtn.disabled = false; generateBtnText.textContent = 'Generate Gambar';
-            };
-        });
-    </script>
-</body>
-</html>
+                </html>
