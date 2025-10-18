@@ -2,8 +2,7 @@
 
 Sebuah website *single-page* sederhana yang memungkinkan pengguna untuk membuat gambar percakapan (Quality Check) palsu dengan tampilan antarmuka seperti iPhone. Proyek ini dibuat murni menggunakan **HTML, CSS, dan JavaScript** di sisi klien, tanpa memerlukan *backend* atau *database*.
 
-![Contoh Tampilan Website](https://qciphong.markxplorer.my.idog-image.jpg) 
-*<p align="center">Ganti URL di atas dengan screenshot website Anda agar lebih menarik.</p>*
+![Contoh Tampilan Website](https://qciphong.markxplorer.my.id/og-image.jpg) 
 
 ## Deskripsi 📝
 
