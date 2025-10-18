@@ -34,7 +34,7 @@ Karena ini adalah proyek *front-end* murni, Anda tidak memerlukan server atau in
 
 1.  **Clone atau Unduh Proyek:**
     ```bash
-    git clone [https://github.com/markxplorer969/QcIphong.git]([https://github.com/username/nama-repo.git](https://github.com/markxplorer969/QcIphong.git))
+    git clone https://github.com/markxplorer969/QcIphong.git
     ```
     Atau cukup unduh file `index.html` dari repositori.
 
